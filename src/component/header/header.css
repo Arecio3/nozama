@@ -1,0 +1,72 @@
+/* Header Container */
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/* Amazon Logo */
+.headerLogo {
+    width: 100px;
+    object-fit: contain;
+    margin: 0 20px;
+    margin-top: 18px;
+}
+/* Search bar container */
+.headerSearch {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+/* Input field */
+.headerInput {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: .5px;
+}
+/* Search Logo */
+.headerSearchIcon {
+    padding: 5px;
+    height: 22px !important;
+    background-color: #cd9042;
+    border-radius: .5px;
+}
+/* Right Side "Hello Guest" */
+.rightOptionLineOne {
+    font-size: 10px;
+}
+/* Right side "Sign in" */
+.rightOptionLineTwo {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* Parent of each header option since was given display:flex and the input container and logo has flex also they are all abiding by it's rule and spacing itself evenly*/
+.headerNav {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* All right side options */
+.headerOption {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+.headerBasketLogo {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.basketCount {
+    margin-left: 10px;
+    margin-right: 10px;
+}
