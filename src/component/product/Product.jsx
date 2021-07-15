@@ -1,9 +1,31 @@
 import React from "react";
+import { useStateValue } from "../../Context/StateProvider";
 import "./product.css";
 
-function Product({ title, image, rating, price }) {
+function Product({ id, title, image, rating, price }) {
+
+  const [{ basket }, dispatch] = useStateValue();
+
+  console.log(`This is the basket`, basket)
+
+  const addToBasket = () => {
+    //dispatch item to data layer
+    dispatch({
+      // type of action
+      type: 'ADD_TO_BASKET',
+      // actual item being pushed
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      },
+    })
+  }
+
   return (
-    <div className="product">
+    <div className="product" >
       <div className="productInfo">
         <p>{title}</p>
         <p className="productPrice">
@@ -14,14 +36,14 @@ function Product({ title, image, rating, price }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>⭐</p>
+              <p key={i}>⭐</p>
             ))}
         </div>
       </div>
 
       <img src={image} alt="" />
 
-      <button>Add to Basket</button>
+      <button onClick={addToBasket}>Add to Basket</button>
     </div>
   );
   // Explains line 15

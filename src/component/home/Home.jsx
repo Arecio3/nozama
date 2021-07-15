@@ -18,22 +18,23 @@ function Home() {
 
       <div className="homeRow">
         <Product
+          id={1}
           title="Timeless Laws of Development"
           rating={5}
           image={Product1}
           price={22.95}
         />
-        <Product title='The Idea Factory: Bell Labs and the Great Age of American Innovation' price={7.55} rating={4} image={Product2}/>
+        <Product id={2} title='The Idea Factory: Bell Labs and the Great Age of American Innovation' price={7.55} rating={4} image={Product2}/>
       </div>
 
       <div className="homeRow">
-        <Product title='SAMSUNG Odyssey G3 Series 27-Inch FHD 1080p Gaming Monitor, 144Hz, 1ms, 3-Sided Border-Less, VESA Compatible, Height Adjustable Stand, FreeSync Premium' price={269.99} rating={5} image={Product3}/>
-        <Product title='Ghost of Tsushima Directors Cut' price={69.95} rating={3} image={Product4}/>
-        <Product title='Canon PowerShot SX540 HS Digital Camera' price={299} rating={3} image={Product6}/>
+        <Product id={3} title='SAMSUNG Odyssey G3 Series 27-Inch FHD 1080p Gaming Monitor, 144Hz, 1ms, 3-Sided Border-Less, VESA Compatible, Height Adjustable Stand, FreeSync Premium' price={269.99} rating={5} image={Product3}/>
+        <Product id={4} title='Ghost of Tsushima Directors Cut' price={69.95} rating={3} image={Product4}/>
+        <Product id={5} title='Canon PowerShot SX540 HS Digital Camera' price={299} rating={3} image={Product6}/>
       </div>
 
       <div className="homeRow">
-        <Product title='Skytech Archangel Gaming Computer PC Desktop' price={1199} rating={5} image={Product5}/>
+        <Product id={6} title='Skytech Archangel Gaming Computer PC Desktop' price={1199} rating={5} image={Product5}/>
       </div>
     </div>
   );
