@@ -43,7 +43,7 @@ function Product({ id, title, image, rating, price }) {
 
       <img src={image} alt="" />
 
-      <button onClick={addToBasket}>Add to Basket</button>
+      <button onClick={addToBasket} style={{cursor:"pointer"}}>Add to Basket</button>
     </div>
   );
   // Explains line 15

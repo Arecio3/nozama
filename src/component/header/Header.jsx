@@ -2,10 +2,13 @@ import React from "react";
 import amazonLogo from "../../images/amazonLogo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import { useStateValue } from '../../Context/StateProvider'
 import { Link } from "react-router-dom";
-
 import "./header.css";
+
 function Header() {
+  const [{ basket }, dispatch] = useStateValue();
+
   return (
     <div className="header">
       <Link to="/">
@@ -37,7 +40,8 @@ function Header() {
         <Link to="/checkout">
           <div className="headerBasketLogo">
             <ShoppingBasketIcon className="link" />
-            <span className="rightOptionLineTwo basketCount">0</span>
+            {/* ? is optional chaining so if for any reason basket value comes as undefined it will terminate  */}
+            <span className="rightOptionLineTwo basketCount">{basket?.length}</span>
           </div>
         </Link>
       </div>
