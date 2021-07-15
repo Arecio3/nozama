@@ -1,7 +1,37 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../../firebase";
 import "./login.css";
 function Login() {
+    // allows us to change url
+    const history = useHistory();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const signIn = e => {
+        e.preventDefault()
+        // firebase login
+        auth.signInWithEmailAndPassword(email, password)
+        .then(auth => {
+            history.push('/')
+        })
+        .catch(error => alert(error.message))
+    }
+
+    const register = e => {
+        e.preventDefault()
+        // firebase register
+        auth.createUserWithEmailAndPassword(email, password)
+        .then((auth) => {
+            // successfully created new user
+            console.log(auth)
+            // if user was made then we forcefully redirect user to home page
+            if (auth) {
+                history.push('/')
+            }
+        })
+        .catch(error => alert(error.message))
+    }
   return (
     <div className="login">
       <Link to="/">
@@ -17,12 +47,12 @@ function Login() {
 
         <form>
           <h5>E-mail</h5>
-          <input type="text" />
+          <input type="text" value={email} onChange={e => setEmail(e.target.value)}/>
 
           <h5>Password</h5>
-          <input type="password" />
-
-          <button className='loginSignInBtn'>Sign In</button>
+          <input type="password" value={password} onChange={e => setPassword(e.target.value)}/>
+            {/* Having type=submit allows user to press enter on keyboard to submit form */}
+          <button type='submit' className='loginSignInBtn' onClick={signIn} style={{cursor:'pointer'}}>Sign In</button>
         </form>
 
         <p>
@@ -30,7 +60,7 @@ function Login() {
           see our Privacy Notice, our Cookies Notice and our Interest-Based Ads.
         </p>
 
-        <button className='registerBtn'>Register Account</button>
+        <button onClick={register} className='registerBtn' style={{cursor:'pointer'}}>Register Account</button>
       </div>
     </div>
   );
