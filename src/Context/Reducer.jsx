@@ -4,6 +4,8 @@ export const initialState = {
 };
 
 //Selector how we get total for basket
+// Reduce function maps through the basket it takes an initial amount and each item
+// Every time it loops it adds the item price to the total amount, initial amount is 0
 export const getBasketTotal = (basket) => basket?.reduce((amount, item) => item.price + amount, 0)
 
 // action is weather you want to add or remove from the basket
