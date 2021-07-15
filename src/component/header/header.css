@@ -40,6 +40,8 @@
 /* Right Side "Hello Guest" */
 .rightOptionLineOne {
     font-size: 10px;
+    text-decoration: none;
+    list-style: none;
 }
 /* Right side "Sign in" */
 .rightOptionLineTwo {
@@ -58,7 +60,8 @@
     flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
-    color: white;
+    color: white !important;
+   
 }
 
 .headerBasketLogo {
@@ -71,4 +74,9 @@
 .basketCount {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
 }

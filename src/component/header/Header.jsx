@@ -2,7 +2,7 @@ import React from "react";
 import amazonLogo from "../../images/amazonLogo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import { useStateValue } from '../../Context/StateProvider'
+import { useStateValue } from "../../Context/StateProvider";
 import { Link } from "react-router-dom";
 import "./header.css";
 
@@ -22,10 +22,12 @@ function Header() {
       </div>
 
       <div className="headerNav">
-        <div className="headerOption">
-          <span className="rightOptionLineOne">Hello Guest</span>
-          <span className="rightOptionLineTwo">Sign In</span>
-        </div>
+        <Link className='link' to="/login">
+          <div className="headerOption">
+            <span className="rightOptionLineOne">Hello Guest</span>
+            <span className="rightOptionLineTwo">Sign In</span>
+          </div>
+        </Link>
 
         <div className="headerOption">
           <span className="rightOptionLineOne">Returns</span>
@@ -39,9 +41,11 @@ function Header() {
 
         <Link to="/checkout">
           <div className="headerBasketLogo">
-            <ShoppingBasketIcon className="link" />
+            <ShoppingBasketIcon />
             {/* ? is optional chaining so if for any reason basket value comes as undefined it will terminate  */}
-            <span className="rightOptionLineTwo basketCount">{basket?.length}</span>
+            <span className="rightOptionLineTwo basketCount">
+              {basket?.length}
+            </span>
           </div>
         </Link>
       </div>
