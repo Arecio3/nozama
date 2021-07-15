@@ -21,7 +21,7 @@ function Product({ title, image, rating, price }) {
 
       <img src={image} alt="" />
 
-      <button>Add to Cart</button>
+      <button>Add to Basket</button>
     </div>
   );
   // Explains line 15

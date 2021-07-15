@@ -14,6 +14,7 @@
     object-fit: contain;
     margin: 0 20px;
     margin-top: 10px;
+    cursor: pointer;
 }
 /* Search bar container */
 .headerSearch {
@@ -63,7 +64,8 @@
 .headerBasketLogo {
     display: flex;
     align-items: center;
-    color: white !important;
+    color: white;
+    cursor: pointer;
 }
 
 .basketCount {

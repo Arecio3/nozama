@@ -28,7 +28,7 @@ function Home() {
 
       <div className="homeRow">
         <Product title='SAMSUNG Odyssey G3 Series 27-Inch FHD 1080p Gaming Monitor, 144Hz, 1ms, 3-Sided Border-Less, VESA Compatible, Height Adjustable Stand, FreeSync Premium' price={269.99} rating={5} image={Product3}/>
-        <Product title='Ghost of Tsushima Directors Cut' price={69.95} rating={5} image={Product4}/>
+        <Product title='Ghost of Tsushima Directors Cut' price={69.95} rating={3} image={Product4}/>
         <Product title='Canon PowerShot SX540 HS Digital Camera' price={299} rating={3} image={Product6}/>
       </div>
 
