@@ -43,6 +43,13 @@
     text-decoration: none;
     list-style: none;
 }
+
+.userName {
+    text-transform: uppercase;
+    font-style: italic;
+    color: #cd9042;
+}
+
 /* Right side "Sign in" */
 .rightOptionLineTwo {
     font-size: 13px;

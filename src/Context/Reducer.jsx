@@ -1,6 +1,7 @@
 // Reducer helps dispatch or add to the data layer so we can use it in whatever component we want
 export const initialState = {
   basket: [],
+  user: null
 };
 
 //Selector how we get total for basket
@@ -10,7 +11,7 @@ export const getBasketTotal = (basket) => basket?.reduce((amount, item) => item.
 
 // action is weather you want to add or remove from the basket
 const reducer = (state, action) => {
-//   console.log(action);
+  console.log(action);
   switch (action.type) {
     case "ADD_TO_BASKET":
       return {
@@ -35,6 +36,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         basket: newBasket
+      }
+
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user
       }
     // default state
     default:
