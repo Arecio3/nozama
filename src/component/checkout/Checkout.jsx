@@ -6,7 +6,8 @@ import Subtotal from "../subtotal/Subtotal";
 import "./checkout.css";
 
 function Checkout() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+  console.log(user)
 
   return (
     <div className="checkout">
@@ -17,8 +18,8 @@ function Checkout() {
           alt=""
         />
       <div>
+        <h3>Hello, <span className='userTitle'>{user?.email.substring(0, user.email.lastIndexOf("@"))}</span></h3>
         <h2 className="checkoutTitle">Your Shopping Basket</h2>
-      
         {basket.map(item => (
           <CheckoutProduct 
           id={item.id}

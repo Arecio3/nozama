@@ -15,3 +15,8 @@
     padding: 10px;
     border-bottom: 1px solid lightgray;
 }
+
+.userTitle {
+    color: #cd9042;
+    font-style: italic;
+}
