@@ -1,4 +1,5 @@
 import React from "react";
+import dotenv from 'dotenv'
 import amazonLogo from "../../images/amazonLogo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
@@ -6,7 +7,6 @@ import { useStateValue } from "../../Context/StateProvider";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase";
 import "./header.css";
-
 function Header() {
   const [{ basket, user }, dispatch] = useStateValue();
 
