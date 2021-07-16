@@ -46,7 +46,7 @@ function Header() {
           <span className="rightOptionLineTwo">Membership</span>
         </div>
 
-        <Link to="/checkout">
+        <Link to="/checkout" className='link'>
           <div className="headerBasketLogo">
             <ShoppingBasketIcon />
             {/* ? is optional chaining so if for any reason basket value comes as undefined it will terminate  */}
