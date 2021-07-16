@@ -12,7 +12,6 @@ import { useEffect } from 'react';
 import { auth } from './firebase';
 import { useStateValue } from './Context/StateProvider';
 import Payment from './component/payment/Payment';
-import dotenv from 'dotenv'
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
 
