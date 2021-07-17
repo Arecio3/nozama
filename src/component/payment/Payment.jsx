@@ -8,6 +8,7 @@ import "./payment.css";
 import { useElements, useStripe, CardElement } from "@stripe/react-stripe-js";
 import { getBasketTotal } from "../../Context/Reducer";
 import { element } from "prop-types";
+import { db } from '../../firebase';
 
 function Payment() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -54,6 +55,19 @@ function Payment() {
       })
       .then(({ paymentIntent }) => {
         // paymentIntent = payment confirmation
+
+        db
+        // goes to user collection then going to user, then that users order and get the order id then add info in set obj
+        .collection('users')
+        .doc(user?.uid)
+        .collection('orders')
+        .doc(paymentIntent.id)
+        .set({
+          basket: basket,
+          amount: paymentIntent.amount,
+          created: paymentIntent.created,
+        })
+
         setSucceeded(true);
         setError(null);
         setProcessing(false);

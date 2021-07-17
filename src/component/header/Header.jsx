@@ -13,7 +13,7 @@ function Header() {
     if (user) {
       auth.signOut();
     }
-  }
+  };
 
   return (
     <div className="header">
@@ -28,24 +28,35 @@ function Header() {
       </div>
 
       <div className="headerNav">
-        <Link className='link' to={!user && '/login'}>
+        <Link className="link" to={!user && "/login"}>
           <div onClick={handleAuth} className="headerOption">
-            <span className="rightOptionLineOne">Hello <span className='userName'>{!user ? 'Guest' : user.email.substring(0, user.email.lastIndexOf("@"))}</span></span>
-            <span className="rightOptionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
+            <span className="rightOptionLineOne">
+              Hello{" "}
+              <span className="userName">
+                {!user
+                  ? "Guest"
+                  : user.email.substring(0, user.email.lastIndexOf("@"))}
+              </span>
+            </span>
+            <span className="rightOptionLineTwo">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
           </div>
         </Link>
 
-        <div className="headerOption">
-          <span className="rightOptionLineOne">Returns</span>
-          <span className="rightOptionLineTwo">& Orders</span>
-        </div>
+        <Link className='link' to='/orders'>
+          <div className="headerOption">
+            <span className="rightOptionLineOne">Returns</span>
+            <span className="rightOptionLineTwo">& Orders</span>
+          </div>
+        </Link>
 
         <div className="headerOption">
           <span className="rightOptionLineOne">Your</span>
           <span className="rightOptionLineTwo">Membership</span>
         </div>
 
-        <Link to="/checkout" className='link'>
+        <Link to="/checkout" className="link">
           <div className="headerBasketLogo">
             <ShoppingBasketIcon />
             {/* ? is optional chaining so if for any reason basket value comes as undefined it will terminate  */}
