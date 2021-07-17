@@ -8,7 +8,7 @@ const firebaseConfig = {
     storageBucket: "nozama-53fd6.appspot.com",
     messagingSenderId: "614881357118",
     appId: "1:614881357118:web:95d506288a40cd8b5fd06f",
-    measurementId: "G-LRB2BTFLFE"
+    measurementId: "G-LRB2BTFLFE",
   };
 
 // sets up our firebase app and passes in the needed credentials
