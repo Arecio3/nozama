@@ -57,6 +57,10 @@ function Payment() {
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+
+        dispatch({
+          type: 'EMPTY_BASKET'
+        })
         // swap page
         history.replace("/orders");
       });
