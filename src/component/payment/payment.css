@@ -30,3 +30,27 @@
 .paymentAddress, .paymentItems, .paymentDetails {
     flex: 0.8;
 }
+
+.paymentDetails > form {
+    max-width: 400px;
+}
+
+.paymentDetails > h3 {
+    padding-bottom: 20px;
+}
+
+.paymentDetails > form > div > button {
+    background: #f0c14b;
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    border: none;
+    font-weight: bolder;
+    margin-top: 10px;
+    color: #111;
+    cursor: pointer;
+}
+
+.paymentDetails > form > div > button:hover {
+    border: 1px solid #a88734 #9c7e31 #846a29;
+}
