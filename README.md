@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Nozama
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  
+  # Table of Contents 
+  * [Installation](#Installation) 
+  * [Usage](#Usage) 
+  * [License](#license)
+  * [Contributing](#Contribute) 
+  * [Testing](#Testing)
+  * [Questions](#Questions)
+  
+  # Description 
+Amazons evil twin Nozama ! I wanted to eventually open up my own E-Commerce store or help someone build there's so what better way then to model the most successful one of them all ! Of course eventually I intend to give it a new look in version 1.5 right now I'm using Stripe in order to mock an actual transaction right now it's only being ran in test mode right now because I haven't gave it my finishing touches but still you can put in your info or 42 repeating and mock a real transaction (don't expect any of the products to ever get there) you can add as many items as you like with the number of items being added to the cart shown in real time, the checkout page has a calculated total of all the products combined no shipping fee :). When you hit checkout it process the payment and gives you a order receipt, thank you for shopping at Nozama !
+  
+  # Installation
+   **yarn install**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  # Testing
+  ****
 
-## Available Scripts
+  # Contribute
+  **Create pull request**
 
-In the project directory, you can run:
+  # Usage
+  **git clone**
 
-### `yarn start`
+  # Questions
+  If you had any questions feel free to contact my email cuba289@gmail.com
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  To see more of my work visit me here [Arecio3](https://github.com/Arecio3)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+  # License
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

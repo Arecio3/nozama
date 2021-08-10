@@ -11,3 +11,5 @@ export default instance
 
 // Project Console
 // https://console.firebase.google.com/project/nozama-53fd6/overview
+
+// Hosting URL: https://nozama-53fd6.web.app
